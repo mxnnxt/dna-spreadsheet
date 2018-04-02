@@ -7,6 +7,7 @@ Creates a spreadsheet with all DNA Nike Bot task import data.
 * DO NOT edit anything in the script itself.
 * Install xlwt if it already isn't satisfied. (type "pip install xlwt" into terminal)
 * Install string if it already isn't satisfied. (type "pip install string" into terminal)
+* Install names if it already isn't satisfied. (type "pip install names" into terminal)
 * Install random if it already isn't satisfied. (type "pip install random" into terminal)
 * Open terminal (command prompt on windows)
 * cd to file location or open terminal in the folder the script is in.
