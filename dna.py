@@ -13,8 +13,10 @@ print (" --------------------------------------------\n")
 #user input
 times = int(input("Enter the number of times you would like to fill: "))
 profilename = str(input("Enter Profile Name: "))
+last_name = str(input("Enter Last Name: "))
 sku = str(input("Enter the SKU: "))
-addy1 = str(input("Enter Address 1: "))
+addy1 = str(input("Enter Prior to Address: "))
+addy12 = str(input("Enter Remainder: "))
 city = str(input("Enter City: "))
 state = str(input("Enter State (ex. NY) : "))
 area = str(input("Enter Zip Code: "))
@@ -61,7 +63,7 @@ for i in range(times):
 	#SKU
 	sheet1.write(i, 4, sku)
 	#size
-	size_run = ['7','7.5','8','8.5','9','9.5','10','10.5','11','11.5','12','12.5','13','14']
+	size_run = ['7','7.5','8','8.5','9','9.5','10','10.5','11','11.5']
 	size = random.choice(size_run)
 	sheet1.write(i, 5, size)
 	#firstname
@@ -70,12 +72,13 @@ for i in range(times):
 	sheet1.write(i, 6, firstName)
 	#lastname
 	lastName = names.get_last_name()
-	sheet1.write(i, 7, lastName)
+	sheet1.write(i, 7, last_name)
 	#address line 1
 	size = 4
-	chars1 = string.ascii_uppercase + string.digits
+	chars1 = string.ascii_uppercase+string.ascii_lowercase
 	chars2 = ''.join(random.choice(chars1) for _ in range(size))
-	addy2 = chars2+" "+addy1
+	new_jig = chars2[:2]
+	addy2 = addy1+" "+new_jig+" "+addy12
 	sheet1.write(i, 8, addy2)
 	#City
 	sheet1.write(i, 10, city)
